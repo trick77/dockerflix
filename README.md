@@ -7,7 +7,7 @@ Got a virtual private server with a U.S. IP address?
 Know how to set up the latest and greatest version of Docker?  
 **Then you've come to the right place!**
 
-Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years. Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks a geo-fenced content provider into thinking the request originated from within the U.S. 
+Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years. Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks geo-fenced on-demand streaming media providers into thinking the request originated from within the U.S. This so-called DNS unblocking approach differs vastly from a VPN.
 
 Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
 
@@ -38,6 +38,12 @@ This configuration has to be used in your home router (if it runs Dnsmasq for DN
 
 Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some multimedia players don't support SNI and thus won't work with Dockerflix. 
 
+## Supported on-demand Internet streaming services 
+
+tbd
+
 ## Contributing
 
 Please contribute using pull requests instead of opening issues to complain that this or that doesn't work. No one gets paid here, so don't expect any support.
+
+
