@@ -13,7 +13,7 @@ Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-
 
 ## Installation
 
-Clone the repository on your VPS server and build the Dockerflix image using the provided shell script:  
+Clone this Github repository on your VPS server and build the Dockerflix image using the provided shell script:  
  `./build.sh`
 
 ## Usage
@@ -23,7 +23,7 @@ Once the Dockerflix image has been built, just run it using:
 
 Make sure TCP ports 80 and 443 on your VPS are not in use by some other software like a pre-installed web server. Check with `netstat -tulpn` when in doubt. Make sure both ports are accessible from the outside if using an inbound firewall on the VPS server.
 
-From now on, you can start or suspend the Dockerflix container using `docker start dockerflix` and `docker stop dockerflix`
+From now on, the Dockerflix container can be resumed or suspended using `docker start dockerflix` and `docker stop dockerflix`
 
 To see if the Dockerflix container is up and running use `docker ps` or `docker ps -a`. Want to get rid of Dockerflix? Just type `docker stop dockerflix; docker rm dockerflix` and it's gone. 
 
