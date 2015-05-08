@@ -21,6 +21,10 @@ Once the dockerflix image has been built, just run it using:
 
 Make sure TCP ports 80 and 443 on your VPS are not in use by some other software like a pre-installed web server. Check with `netstat -tulpn` when in doubt. Make sure both ports are accessible from the outside if using an inbound firewall on the VPS server.
 
+From now on, you can start or suspend the dockerflix container using `docker start dockerflix` and `docker stop dockerflix`
+
+To see if the dockerflix container is up and running use `docker ps` or `docker ps -a`. Want to get rid of dockerflix? Just type `docker stop dockerflix; docker rm dockerflix` and it's gone. 
+
 ## Post installation
 
 Now that we have a proxy, we need to make sure that all **relevant** DNS queries are answered with your VPS' public IP address. Generate a Dnsmasq configuration using:
