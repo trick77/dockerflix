@@ -7,6 +7,8 @@ Got a virtual private server with a U.S. IP address?
 Know how to set up the latest and greatest version of Docker?  
 **Then you've come to the right place!**
 
+Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years. Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks a geo-fenced content provider into thinking the request originated from within the U.S. 
+
 Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
 
 ## Installation
