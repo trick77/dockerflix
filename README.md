@@ -36,7 +36,9 @@ This configuration has to be used in your home router (if it runs Dnsmasq for DN
 
 ## Test
 
-Everything has been set up properly once your VPS' IP address shows up in the web browser when navigating to http://www.iplocation.net/
+Everything has been set up properly once your VPS' IP address shows up in the web browser when navigating to http://ipinfo.io/
+
+If the web browser shows your home IP there's something wrong with DNS resolution. Make sure not to fall into the browser DNS caching trap, always restart after changing DNS addresses.
 
 ## Limitations
 
