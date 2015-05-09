@@ -21,7 +21,7 @@ if args.type == 'dnsmasq':
   print('#### paste this into your router\'s dnsmasq configuration ' + args.dnsmasqdir + '/dockerflix.conf')
   print(ostr)
 elif args.type == 'bind':
-  print('#### paste this into your router\'s BIND configuration ' + args.binddir + '/zones.dockerflix and include it in your BIND configuration')
-  print(re.sub(r"address=/(.*)/(.*)", 'zone \'\g<1>.\' {\n\ttype master;\n\tfile \'' + args.binddir + '/db.dockerflix\';\n};\n', ostr, flags=re.MULTILINE))
+  print('#### paste this into your router\'s BIND configuration ' + args.binddir + '/dockerflix.zones and include it in your BIND configuration')
+  print(re.sub(r"address=/(.*)/(.*)", 'zone \"\g<1>.\" {\n\ttype master;\n\tfile \"' + args.binddir + '/db.dockerflix\";\n};\n', ostr, flags=re.MULTILINE))
   print('\n;#### paste this into your router\'s BIND configuration ' + args.binddir + '/db.dockerflix')
   print('$TTL 86400\n@\tIN SOA ns1 root.localhost. (\n\t2012100401\n\t604800\n\t86400\n\t2419200\n\t86400\n\t)\n\n@\tIN NS ns1\nns1\tIN A ' + args.remoteip + '\n@\tIN A ' + args.remoteip + '\n*\tIN A ' + args.remoteip + '\n')
