@@ -38,7 +38,7 @@ This configuration has to be used in your home router (if it runs Dnsmasq for DN
 
 Everything has been set up properly once your VPS' IP address shows up in the web browser when navigating to http://ipinfo.io/
 
-If the web browser shows your home IP there's something wrong with DNS resolution. Make sure not to fall into the browser DNS caching trap, always restart after changing DNS addresses.
+If the web browser shows your home IP there's something wrong with DNS resolution. Tip: Make sure not to fall into the OS or browser DNS cache trap, always restart after changing DNS addresses.
 
 ## Limitations
 
@@ -51,15 +51,15 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 | [Netflix](https://www.netflix.com/us/)                          | Yes             | Yes |         |
 | [Hulu](http://www.hulu.com/) (see below)                        | Yes             | Yes |         |
 | [MTV](http://www.mtv.com/videos/home.jhtml)                     | Yes             |     |         |
-| [Vevo](http://www.vevo.com/)                                    | Yes             |     |         |
-| [Crackle](http://www.crackle.com/)                              | Yes             |     |         |
+| [Vevo](http://www.vevo.com/)                                    | Yes             | Yes |         |
+| [Crackle](http://www.crackle.com/)                              | Yes             | Yes |         |
 | [ABC](http://abc.go.com/)                                       | Yes             |     |         |
-| [NBC](http://www.nbc.com/video/full-episodes)                   | Yes             |     |         |
-| [PBS](http://video.pbs.org/)                                    | Yes             |     |         |
+| [NBC](http://www.nbc.com/video/full-episodes)                   | Yes             | Yes |         |
+| [PBS](http://video.pbs.org/)                                    | Yes             | Yes |         |
 | [LogoTV](http://www.logotv.com/video/showall.jhtml)             | Yes             |     |         |
 | [CWTV](http://www.cwtv.com/shows/)                              | Yes             |     |         |
 | [Southpark](http://southpark.cc.com/)                           | Yes             |     |         |
-| [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             |     |         |
+| [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             | Yes |         |
 | [Spike](http://www.spike.com/episodes)                          | Yes             |     |         |
 | [Cooking Channel TV](http://www.cookingchanneltv.com/)          | Yes             |     |         |
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
