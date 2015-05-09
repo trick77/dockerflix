@@ -10,7 +10,7 @@ Simply said, Dockerflix emulates what companies like Unblock-Us and the like hav
 
 Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
 
-## Docker Installation
+## Docker installation
 
 This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
 
