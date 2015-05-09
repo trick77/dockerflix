@@ -49,7 +49,7 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 | Service                                                         | Web browsers    | iOS | Android |
 | --------------------------------------------------------------- | --------------- | --- | ------- |
 | [Netflix](https://www.netflix.com/us/)                          | Yes             | Yes |         |
-| [Hulu](http://www.hulu.com/) (see below)                        | Yes             | Yes |         |
+| [Hulu](http://www.hulu.com/) <sup>[1](#hulu)</sup>       | Yes             | Yes |         |
 | [MTV](http://www.mtv.com/videos/home.jhtml)                     | Yes             |     |         |
 | [Vevo](http://www.vevo.com/)                                    | Yes             | Yes |         |
 | [Crackle](http://www.crackle.com/)                              | Yes             | Yes |         |
@@ -65,7 +65,7 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
 
-Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
+<a name="hulu">1</a>: Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
 
 ## Contributing
 
