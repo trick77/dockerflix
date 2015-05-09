@@ -42,7 +42,7 @@ If the web browser shows your home IP there's something wrong with DNS resolutio
 
 ## Limitations
 
-Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some multimedia players don't support SNI and thus won't work with Dockerflix. 
+Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed.
 
 ## Supported on-demand Internet streaming services 
 
