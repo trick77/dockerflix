@@ -27,7 +27,7 @@ Clone this Github repository on your VPS server and build the Dockerflix image u
 ## Usage
 
 Once the Dockerflix image has been built, just run it using:  
-`docker run -p 80:80 -p 443:443 --name dockerflix trick77/dockerflix`
+`docker run -d -p 80:80 -p 443:443 --name dockerflix trick77/dockerflix`
 
 Make sure TCP ports 80 and 443 on your VPS are not in use by some other software like a pre-installed web server. Check with `netstat -tulpn` when in doubt. Make sure both ports are accessible from the outside if using an inbound firewall on the VPS server.
 
