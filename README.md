@@ -14,12 +14,10 @@ Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-
 
 This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
 
-`$ wget -qO- https://get.docker.io/gpg | sudo apt-key add -`
-`$ echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`
-`$ apt-get update`
-`$ apt-get install lxc-docker`
-
-
+`wget -qO- https://get.docker.io/gpg | sudo apt-key add -`  
+`echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`  
+`apt-get update`  
+`apt-get install lxc-docker`  
 
 ## Dockerflix container installation
 
