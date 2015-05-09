@@ -40,7 +40,25 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 
 ## Supported on-demand Internet streaming services 
 
-tbd
+| Service                                                         | Web browsers  | iOS | Android |
+| --------------------------------------------------------------- | ------------- | --- | ------- |
+| [Netflix](https://www.netflix.com/us/)                          | Y             | Y   |         |
+| [Hulu](http://www.hulu.com/) (see below)                        | Y             | Y   |         |
+| [MTV](http://www.mtv.com/videos/home.jhtml)                     | Y             |     |         |
+| [Vevo](http://www.vevo.com/)                                    | Y             |     |         |
+| [Crackle](http://www.crackle.com/)                              | Y             |     |         |
+| [ABC](http://abc.go.com/)                                       | Y             |     |         |
+| [NBC](http://www.nbc.com/video/full-episodes)                   | Y             |     |         |
+| [PBS](http://video.pbs.org/)                                    | Y             |     |         |
+| [LogoTV](http://www.logotv.com/video/showall.jhtml)             | Y             |     |         |
+| [CWTV](http://www.cwtv.com/shows/)                              | Y             |     |         |
+| [Southpark](http://southpark.cc.com/)                           | Y             |     |         |
+| [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Y             |     |         |
+| [Spike](http://www.spike.com/episodes)                          | Y             |     |         |
+| [Pandora](http://www.pandora.com/)                              | Y             | Y   |         |
+| [iHeart Radio](http://www.iheart.com/)                          | Y             |     |         |
+
+Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
 
 ## Contributing
 
