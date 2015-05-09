@@ -34,6 +34,10 @@ Now that we have set up the proxy, we need to make sure only the **relevant** DN
 
 This configuration has to be used in your home router (if it runs Dnsmasq for DNS resolution) or a Linux-based computer like the Raspberry Pi. Obviously, all DNS requests originating at home have to be resolved/forwarded through Dnsmasq from now on.
 
+## Test
+
+Everything has been set up properly once your VPS' IP address shows up in the web browser when navigating to http://www.iplocation.net/
+
 ## Limitations
 
 Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some multimedia players don't support SNI and thus won't work with Dockerflix. 
@@ -55,6 +59,7 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 | [Southpark](http://southpark.cc.com/)                           | Yes             |     |         |
 | [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             |     |         |
 | [Spike](http://www.spike.com/episodes)                          | Yes             |     |         |
+| [Cooking Channel TV](http://www.cookingchanneltv.com/)          | Yes             |     |         |
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
 
