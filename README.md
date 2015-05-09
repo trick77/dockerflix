@@ -48,6 +48,11 @@ Everything has been set up properly once your VPS' IP address shows up in the we
 
 If the web browser shows your home IP there's something wrong with DNS resolution. Tip: Make sure not to fall into the OS or browser DNS cache trap, always restart after changing DNS addresses.
 
+## Demo proxy server
+
+If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the -r parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
+Obviously, you wil still have to go through the post installation step.
+
 ## Limitations
 
 Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed.
