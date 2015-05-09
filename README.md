@@ -4,14 +4,24 @@ Dockerflix
 Want to watch U.S. Netflix, Hulu, MTV, Vevo, Crackle, ABC, NBC, PBS...?  
 Got a Dnsmasq capable router at home, a Raspberry Pi or similar Linux computer?  
 Got a virtual private server with a U.S. IP address?  
-Know how to set up the latest and greatest version of Docker?  
 **Then you've come to the right place!**
 
 Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years. Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks geo-fenced on-demand streaming media providers into thinking the request originated from within the U.S. This so-called DNS unblocking approach differs vastly from a VPN.
 
 Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
 
-## Installation
+## Docker Installation
+
+This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
+
+`$ wget -qO- https://get.docker.io/gpg | sudo apt-key add -`
+`$ echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`
+`$ apt-get update`
+`$ apt-get install lxc-docker`
+
+
+
+## Dockerflix container installation
 
 Clone this Github repository on your VPS server and build the Dockerflix image using the provided shell script:  
  `./build.sh`
@@ -30,7 +40,7 @@ To see if the Dockerflix container is up and running use `docker ps` or `docker 
 ## Post installation
 
 Now that we have set up the proxy, we need to make sure only the **relevant** DNS queries get answered with the VPS' public IP address. Generate a Dnsmasq configuration using:  
-`python ./gendns-conf.py -r <PUBLIC_IP_OF_YOUR_VPS_SERVER>`
+`python ./gendns-conf.py --remoteip <PUBLIC_IP_OF_YOUR_VPS_SERVER>`
 
 This configuration has to be used in your home router (if it runs Dnsmasq for DNS resolution) or a Linux-based computer like the Raspberry Pi. Obviously, all DNS requests originating at home have to be resolved/forwarded through Dnsmasq from now on.
 
