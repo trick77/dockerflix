@@ -50,7 +50,7 @@ If the web browser shows your home IP there's something wrong with DNS resolutio
 
 ## Demo proxy server
 
-If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the -r parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
+If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the `--remoteip <IP>` parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
 
 ## Limitations
 
