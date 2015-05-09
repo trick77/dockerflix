@@ -51,7 +51,7 @@ If the web browser shows your home IP there's something wrong with DNS resolutio
 ## Demo proxy server
 
 If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the -r parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
-Obviously, you wil still have to go through the post installation step.
+Obviously, you will still have to go through the post installation step in order to use the demo server.
 
 ## Limitations
 
@@ -82,6 +82,6 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 
 ## Contributing
 
-Please contribute using pull requests instead of opening issues to complain that this or that doesn't work. No one gets paid here, so don't expect any support.
+Please contribute by submitting pull requests instead of opening issues to complain that this or that doesn't work. No one gets paid here, so don't expect any support.
 
 
