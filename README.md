@@ -29,7 +29,7 @@ To see if the Dockerflix container is up and running use `docker ps` or `docker 
 
 ## Post installation
 
-Now that we have setup a proxy, we need to make sure that only the **relevant** DNS queries get answered with the VPS' public IP address. Generate a Dnsmasq configuration using:  
+Now that we have set up the proxy, we need to make sure only the **relevant** DNS queries get answered with the VPS' public IP address. Generate a Dnsmasq configuration using:  
 `python ./gendns-conf.py -r <PUBLIC_IP_OF_YOUR_VPS_SERVER>`
 
 This configuration has to be used in your home router (if it runs Dnsmasq for DNS resolution) or a Linux-based computer like the Raspberry Pi. Obviously, all DNS requests originating at home have to be resolved/forwarded through Dnsmasq from now on.
