@@ -65,7 +65,7 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
 
-<sup><a name="hulu">1</a><sup> Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
+<sup><a name="hulu">1</a></sup> Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
 
 ## Contributing
 
