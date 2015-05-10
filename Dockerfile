@@ -18,6 +18,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80 443
 VOLUME ["/etc/sniproxy"]
+VOLUME ["/var/log/sniproxy"]
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]

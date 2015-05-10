@@ -10,10 +10,11 @@ Simply said, Dockerflix emulates what companies like Unblock-Us and the like hav
 Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks geo-fenced on-demand streaming media providers into thinking the request originated from within the U.S. 
 This so-called DNS unblocking approach differs vastly from a VPN.
 
-Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. 
+Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAProxy. 
 To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
 Thanks to sniproxy's ability to proxy requests based on wildcard regex matching it's now so much easier to add support for a service. 
 Now it's usually enough to just add the main domain name to the proxy and DNS configuration and Dockerflix will be able to hop the geo-fence in most cases.
+Since most on-demand streaming media providers are using an off-domain CDN for the video stream, only web site traffic gets sent through Dockerflix. A few exceptions may apply though, notably if the video stream itself is geo-fenced.
 
 ## Docker installation
 
@@ -57,9 +58,9 @@ If the web browser shows your home IP there's something wrong with DNS resolutio
 
 If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the `--remoteip <IP>` parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
 
-## Updating Dockerflix
+## Updating
 
-Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new container with the updated version:
+Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new Docker container with the updated version:
 
 `git pull && docker stop dockerflix ; docker rm dockerflix ; ./build.sh && docker run -d -p 80:80 -p 443:443 --name dockerflix trick77/dockerflix`
 
@@ -67,7 +68,9 @@ Don't forget to update your local DNS configuration as well.
 
 ## Limitations
 
-Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed. If you need to proxy plain old SSLv1/v2 for a device, have a look at the non-SNI description in [tunlr-style-dns-unblocking](https://github.com/trick77/tunlr-style-dns-unblocking).
+Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. 
+If you need to proxy plain old SSLv1/v2 for a device, have a look at the non-SNI approach in [tunlr-style-dns-unblocking](https://github.com/trick77/tunlr-style-dns-unblocking).
+A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed (it still can be done though by rerouting these requests using iptables).
 
 ## Supported on-demand Internet streaming services 
 
@@ -94,6 +97,8 @@ Dockerflix only handles requests using plain HTTP or TLS using the SNI extension
 
 ## Contributing
 
-Please contribute by submitting pull requests instead of opening issues to complain that this or that doesn't work. No one gets paid here, so don't expect any support.
+Like Dockerflix? Please star it on Github!
+
+Please contribute by submitting pull requests instead of opening issues to complain that this or that doesn't work. No one gets paid here, so don't expect any real support.
 
 
