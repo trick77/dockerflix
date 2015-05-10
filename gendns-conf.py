@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(description='Dockerflix DNS config builder')
 parser.add_argument('-r', '--remoteip', help='Dockerflix public server IP address', default='199.233.247.225', required=False)
 parser.add_argument('-c', '--config', help='DNS config file', default='./config/dockerflix-dnsmasq.conf', required=False)
 parser.add_argument('-t', '--type', help='DNS config type', choices=['dnsmasq', 'bind'], default='dnsmasq', required=False)
-parser.add_argument('-d', '--dnsmasqdir', help='BIND config dir', default='/etc/dnsmasq.d', required=False)
+parser.add_argument('-d', '--dnsmasqdir', help='Dnsmasq config dir', default='/etc/dnsmasq.d', required=False)
 parser.add_argument('-b', '--binddir', help='BIND config dir', default='/etc/bind', required=False)
 args = parser.parse_args()
 
