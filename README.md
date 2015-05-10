@@ -6,9 +6,14 @@ Got a Dnsmasq capable router at home, a Raspberry Pi or similar Linux computer?
 Got a virtual private server with a U.S. IP address?  
 **Then you've come to the right place!**
 
-Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years. Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks geo-fenced on-demand streaming media providers into thinking the request originated from within the U.S. This so-called DNS unblocking approach differs vastly from a VPN.
+Simply said, Dockerflix emulates what companies like Unblock-Us and the like have been doing for years.
+Dockerflix uses a man-in-the-middle approach to reroute certain requests through a (your) server in the U.S. and thus tricks geo-fenced on-demand streaming media providers into thinking the request originated from within the U.S. 
+This so-called DNS unblocking approach differs vastly from a VPN.
 
-Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
+Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAproxy. 
+To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator.
+Thanks to sniproxy's ability to proxy requests based on wildcard regex matching it's now so much easier to add support for a service. 
+Now it's usually enough to just add the main domain name to the proxy and DNS configuration and Dockerflix will be able to hop the geo-fence in most cases.
 
 ## Docker installation
 
@@ -54,7 +59,7 @@ If you don't have your own U.S.-located virtual private server yet feel free to 
 
 ## Limitations
 
-Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed.
+Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed. If you need to proxy plain old SSLv1/v2 for a device, have a look at the non-SNI description in [tunlr-style-dns-unblocking](https://github.com/trick77/tunlr-style-dns-unblocking).
 
 ## Supported on-demand Internet streaming services 
 
