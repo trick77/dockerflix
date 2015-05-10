@@ -57,6 +57,14 @@ If the web browser shows your home IP there's something wrong with DNS resolutio
 
 If you don't have your own U.S.-located virtual private server yet feel free to use my Dockerflix demo server. Just omit the `--remoteip <IP>` parameter when calling the gendns-conf.py script and the Dockerflix demo server's IP address will be used.
 
+## Updating Dockerflix
+
+Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new container with the updated version:
+
+`git pull && docker stop dockerflix ; docker rm dockerflix ; ./build.sh && docker run -d -p 80:80 -p 443:443 --name dockerflix trick77/dockerflix`
+
+Don't forget to update your local DNS configuration as well.
+
 ## Limitations
 
 Dockerflix only handles requests using plain HTTP or TLS using the SNI extension. Some media players don't support SNI and thus won't work with Dockerflix. A few media players (i.e. Chromecast) ignore your DNS settings and always resort to a pre-configured DNS resolver which can't be changed. If you need to proxy plain old SSLv1/v2 for a device, have a look at the non-SNI description in [tunlr-style-dns-unblocking](https://github.com/trick77/tunlr-style-dns-unblocking).
