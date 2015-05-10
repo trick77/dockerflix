@@ -107,4 +107,4 @@ Please contribute by submitting pull requests instead of opening issues to compl
 Using a wildcard domain approach may also send traffic to the proxy server even if it's not desired for a certain zone/sub-domain.
 For instance, if a content provider uses its own sub-domain as an alias for a CDN, you may want to exclude the zone for that particular sub-domain from
 your DNS configuration. This is where `config/dockerflix-dnsmasq-exclude.conf` comes into play. Use this file to forward zones to a different (i.e. Google DNS) 
-DNS resolver. Since many CDN optimize their network routes around the world, this usually leads to better stream quality compared to proxying the stream through the proxy server. Obviously, this is only helpful as long as the stream itself is not geo-fenced.
+DNS resolver. Since many CDN optimize their network routes around the world, this usually leads to better stream quality compared to sending the stream across the globe through the proxy server. Obviously, this is only helpful as long as the stream itself is not geo-fenced.
