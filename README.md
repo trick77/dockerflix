@@ -75,6 +75,8 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 
 ## Supported on-demand Internet streaming services 
 
+### United States
+
 | Service                                                         | Web browsers    | iOS | Android |
 | --------------------------------------------------------------- | --------------- | --- | ------- |
 | [Netflix](https://www.netflix.com/us/)                          | Yes             | Yes |         |
@@ -96,6 +98,17 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
 
 <sup><a name="hulu">1</a></sup> Hulu has blacklisted many VPS providers in the U.S. You have to be lucky to find one which still works.
+
+### United Kingdom
+
+| Service                                                         | Web browsers    | iOS | Android |
+| --------------------------------------------------------------- | --------------- | --- | ------- |
+| [BBC UK](http:/www.bbc.co.uk/)                                  | Yes             |     |         |
+| [iTV Player](https://www.itv.com/itvplayer/)                    | Yes             |     |         |
+| [Channel4](http://www.channel4.com/on-demand/)                  | Yes             |     |         |
+
+Use `build.sh uk` on a server with a UK IP address to generate a UK Dockerflix proxy. 
+For the DNS settings, you have to call `gendns.py` with the `--region uk` parameter and the IP address of your UK Dockerflix proxy.
 
 ## Contributing
 
