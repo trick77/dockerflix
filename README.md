@@ -89,10 +89,12 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [NBC](http://www.nbc.com/video/full-episodes)                   | Yes             | Yes |         |
 | [PBS](http://video.pbs.org/)                                    | Yes             | Yes |         |
 | [LogoTV](http://www.logotv.com/video/showall.jhtml)             | Yes             |     |         |
-| [CWTV](http://www.cwtv.com/shows/)                              | Yes             |     |         |
+| [CW TV](http://www.cwtv.com/shows/)                             | Yes             |     |         |
 | [Southpark](http://southpark.cc.com/)                           | Yes             |     |         |
 | [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             | Yes |         |
+| [Star Trek](http://www.startrek.com/videos)                     | Yes             |     |         |
 | [Spike](http://www.spike.com/episodes)                          | Yes             |     |         |
+| [Comedy Channel](http://www.cc.com/full-episodes)               | Yes             |     |         |
 | [Cooking Channel TV](http://www.cookingchanneltv.com/)          | Yes             |     |         |
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
