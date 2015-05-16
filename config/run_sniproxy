@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/sniproxy -c /etc/sniproxy/sniproxy.conf
+exec /usr/sbin/sniproxy -f -c /etc/sniproxy/sniproxy.conf
