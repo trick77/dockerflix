@@ -85,15 +85,16 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [MTV](http://www.mtv.com/videos/home.jhtml)                     | Yes             |     |         |
 | [Vevo](http://www.vevo.com/)                                    | Yes             | Yes |         |
 | [Crackle](http://www.crackle.com/)                              | Yes             | Yes |         |
-| [ABC](http://abc.go.com/)                                       | Yes             |     |         |
+| [ABC](http://abc.go.com/)                                       | Yes             | Yes |         |
 | [NBC](http://www.nbc.com/video/full-episodes)                   | Yes             | Yes |         |
 | [PBS](http://video.pbs.org/)                                    | Yes             | Yes |         |
 | [LogoTV](http://www.logotv.com/video/showall.jhtml)             | Yes             |     |         |
-| [CW TV](http://www.cwtv.com/shows/)                             | Yes             |     |         |
+| [CW TV](http://www.cwtv.com/shows/)                             | Yes             | Yes |         |
+| [Dramafever](http://www.dramafever.com/)                        | Yes             | Yes |         |
 | [Southpark](http://southpark.cc.com/)                           | Yes             |     |         |
 | [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             | Yes |         |
 | [Star Trek](http://www.startrek.com/videos)                     | Yes             |     |         |
-| [Spike](http://www.spike.com/episodes)                          | Yes             |     |         |
+| [Spike](http://www.spike.com/episodes)                          | Yes             | Yes |         |
 | [Comedy Channel](http://www.cc.com/full-episodes)               | Yes             |     |         |
 | [Cooking Channel TV](http://www.cookingchanneltv.com/)          | Yes             |     |         |
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
