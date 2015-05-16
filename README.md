@@ -89,13 +89,18 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [NBC](http://www.nbc.com/video/full-episodes)                   | Yes             | Yes |         |
 | [PBS](http://video.pbs.org/)                                    | Yes             | Yes |         |
 | [LogoTV](http://www.logotv.com/video/showall.jhtml)             | Yes             |     |         |
+| [Comedy Channel](http://www.cc.com/full-episodes)               | Yes             |     |         |
 | [CW TV](http://www.cwtv.com/shows/)                             | Yes             | Yes |         |
+| [Disney Channel](http://www.disneychannel.disney.com/)          | Yes             |     |         |
+| [Disney Junior](http://www.disneyjunior.com/)                   | Yes             |     |         |
+| [Disney XD](http://www.disneyxd.disney.com/)                    | Yes             |     |         |
 | [Dramafever](http://www.dramafever.com/)                        | Yes             | Yes |         |
+| [Showtime](http://www.sho.com/)                                 | Yes             |     |         |
 | [Southpark](http://southpark.cc.com/)                           | Yes             |     |         |
 | [Smithsonian](http://www.smithsonianchannel.com/full-episodes)  | Yes             | Yes |         |
 | [Star Trek](http://www.startrek.com/videos)                     | Yes             |     |         |
 | [Spike](http://www.spike.com/episodes)                          | Yes             | Yes |         |
-| [Comedy Channel](http://www.cc.com/full-episodes)               | Yes             |     |         |
+| [ulive](http://www.ulive.com/)                                  | Yes             |     |         |
 | [Cooking Channel TV](http://www.cookingchanneltv.com/)          | Yes             |     |         |
 | [Pandora](http://www.pandora.com/)                              | Yes             | Yes |         |
 | [iHeart Radio](http://www.iheart.com/)                          | Yes             |     |         |
