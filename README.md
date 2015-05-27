@@ -1,7 +1,7 @@
 Dockerflix
 ========
 
-Want to watch U.S. Netflix, Hulu, MTV, Vevo, Crackle, ABC, NBC, PBS...?  
+Want to watch U.S. Netflix, Hulu, MTV, Vevo, Crackle, ABC, NBC, PBS, HBO...?  
 Got a Dnsmasq capable router at home, a Raspberry Pi or similar Linux computer?  
 Got a virtual private server with a U.S. IP address?  
 **Then you've come to the right place!**
@@ -82,6 +82,7 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [Netflix](https://www.netflix.com/us/)                          | Yes             | Yes |         |
 | [Hulu](http://www.hulu.com/)<sup>[1](#hulu)</sup>               | Yes             | Yes |         |
 | [HBO Now](http://www.hbonow.com/)                               | Yes             | Yes |         |
+| [HBO GO](http://www.hbogo.com/)                                 | Yes             |     |         |
 | [MTV](http://www.mtv.com/videos/home.jhtml)                     | Yes             |     |         |
 | [Vevo](http://www.vevo.com/)                                    | Yes             | Yes |         |
 | [Crackle](http://www.crackle.com/)                              | Yes             | Yes |         |
