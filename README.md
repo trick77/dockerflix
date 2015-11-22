@@ -11,11 +11,13 @@ Dockerflix uses a man-in-the-middle approach to reroute certain requests through
 This so-called DNS unblocking approach differs vastly from a VPN.
 
 Since my [other  DNS unblocking project](https://github.com/trick77/tunlr-style-dns-unblocking) wasn't easy to install and hard to maintain, I came up with a new variant using [dlundquist's](https://github.com/dlundquist) [sniproxy](https://github.com/dlundquist/sniproxy) instead of HAProxy. 
-To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq configuration generator. And voilà: DNS-unblocking as a service (DAAS) ;-)
+To make the installation a breeze, I boxed the proxy into a Docker container and wrote a small, Python-based Dnsmasq/BIND configuration generator. And voilà: DNS-unblocking as a service (DaaS) ;-)
 
 Thanks to sniproxy's ability to proxy requests based on a wildcard/regex match it's now so much easier to add support for a service. 
 Now it's usually enough to just add the main domain name to the proxy and DNS configuration and Dockerflix will be able to hop the geo-fence in most cases.
 Since most on-demand streaming media providers are using an off-domain CDN for the video stream, only web site traffic gets sent through Dockerflix. A few exceptions may apply though, notably if the stream itself is geo-fenced.
+
+Dockerflix provides scripts to create zone files for Dnsmasq and BIND. Please be aware that Dockerflix doesn't come with a recursive DNS resolver. I'm assuming you're setting up a private DNS resolver at home, either using your router or some Linux mini computer like the Raspberry Pi. Open resolvers pose a significant threat to the global network infrastructure. Please see [here](http://www.openresolverproject.org/) for more information why it's a big no-no.
 
 ## Docker installation
 
