@@ -1,23 +1,15 @@
 us:
   build: .
   dockerfile: dockerflix.us
-  container_name: dockerflix-us
   ports:
   - "80:80"
   - "443:443"
   restart: always
-#  volumes:
-#  - ./dockerflix-conf:/etc/sniproxy
-#  - ./dockerflix-log:/var/log/sniproxy
   
 uk:
   build: .
   dockerfile: dockerflix.uk
-  container_name: dockerflix-uk
   ports:
   - "80:80"
   - "443:443"
   restart: always
-  volumes:
-  - ./dockerflix-conf:/etc/sniproxy
-  - ./dockerflix-log:/var/log/sniproxy  
