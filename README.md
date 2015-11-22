@@ -24,23 +24,19 @@ This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
 `wget -qO- https://get.docker.io/gpg | sudo apt-key add -`  
 `echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`  
 `apt-get update`  
-`apt-get install lxc-docker`  
-
-## Dockerflix container installation
-
-Clone this Github repository on your VPS server and build the Dockerflix image using the provided shell script:  
- `./build.sh`
+`apt-get install lxc-docker python-pip`
+`pip install docker-compose`
 
 ## Usage
 
-Once the Dockerflix image has been built, just run it using:  
-`docker run -d -p 80:80 -p 443:443 --restart=always --name dockerflix trick77/dockerflix`
+Clone this Github repository and build/run the Dockerflix container using docker-compose. It may take a while to build the image, so please be patient:
+`docker-compose up -d us`
 
 Make sure TCP ports 80 and 443 on your VPS are not in use by some other software like a pre-installed web server. Check with `netstat -tulpn` when in doubt. Make sure both ports are accessible from the outside if using an inbound firewall on the VPS server.
 
-From now on, the Dockerflix container can be resumed or suspended using `docker start dockerflix` and `docker stop dockerflix`
+From now on, the Dockerflix container can be resumed or suspended using `docker-compose start` and `docker-compose stop`
 
-To see if the Dockerflix container is up and running use `docker ps` or `docker ps -a`. Want to get rid of Dockerflix? Just type `docker stop dockerflix; docker rm dockerflix` and it's gone. 
+To see if the Dockerflix container is up and running use `docker-compose ps`. Want to get rid of Dockerflix? Just type `docker-compose stop ; docker-compose rm` and it's gone. 
 
 ## Post installation
 
@@ -63,7 +59,7 @@ If you don't have your own U.S.-located virtual private server yet feel free to 
 
 Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new Docker container with the updated version:
 
-`git pull && docker stop dockerflix ; docker rm dockerflix ; ./build.sh && docker run -d -p 80:80 -p 443:443 --restart=always --name dockerflix trick77/dockerflix`
+`git pull && docker-compose stop ; docker-compose rm -f ; docker-compose build us && docker-compose up -d us`
 
 Don't forget to update your local DNS configuration as well.
 
@@ -116,8 +112,11 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 | [iTV Player](https://www.itv.com/itvplayer/)                    | Yes             |     |         |
 | [Channel4](http://www.channel4.com/on-demand/)                  | Yes             |     |         |
 
-Use `./build.sh uk` on a server with a UK IP address to generate a UK Dockerflix proxy. 
+Use `docker-compose up -d uk` on a server with a UK IP address to generate a UK Dockerflix proxy. 
 For the DNS settings, you have to call `gendns.py` with the `--region uk` parameter and provide the IP address of your UK Dockerflix proxy using the `--remoteip` parameter.
+
+To update a UK dockerflix please use something like this:
+`git pull && docker-compose stop ; docker-compose rm -f ; docker-compose build uk && docker-compose up -d uk`
 
 ## Contributing
 
