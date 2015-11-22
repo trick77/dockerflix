@@ -24,13 +24,12 @@ This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
 `wget -qO- https://get.docker.io/gpg | sudo apt-key add -`  
 `echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`  
 `apt-get update`  
-`apt-get install lxc-docker python-pip`
-
+`apt-get install lxc-docker python-pip`  
 `pip install docker-compose`
 
 ## Usage
 
-Clone this Github repository and build/run the Dockerflix container using docker-compose. It may take a while to build the image, so please be patient:
+Clone this Github repository and build/run the Dockerflix container using docker-compose. It may take a while to build the image, so please be patient:  
 `docker-compose up -d us`
 
 Make sure TCP ports 80 and 443 on your VPS are not in use by some other software like a pre-installed web server. Check with `netstat -tulpn` when in doubt. Make sure both ports are accessible from the outside if using an inbound firewall on the VPS server.
@@ -58,8 +57,7 @@ If you don't have your own U.S.-located virtual private server yet feel free to 
 
 ## Updating
 
-Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new Docker container with the updated version:
-
+Unless you've made local changes to Dockerflix, this one-liner executed in the cloned repository directory fetches the latest Dockerflix version from Github and creates a new Docker container with the updated version:  
 `git pull && docker-compose stop ; docker-compose rm -f ; docker-compose build us && docker-compose up -d us`
 
 Don't forget to update your local DNS configuration as well.
@@ -116,7 +114,7 @@ A few media players (i.e. Chromecast) ignore your DNS settings and always resort
 Use `docker-compose up -d uk` on a server with a UK IP address to generate a UK Dockerflix proxy. 
 For the DNS settings, you have to call `gendns.py` with the `--region uk` parameter and provide the IP address of your UK Dockerflix proxy using the `--remoteip` parameter.
 
-To update a UK dockerflix please use something like this:
+To update a UK dockerflix please use something like this:  
 `git pull && docker-compose stop ; docker-compose rm -f ; docker-compose build uk && docker-compose up -d uk`
 
 ## Contributing
