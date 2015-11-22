@@ -25,6 +25,7 @@ This will install the latest Docker version on Ubuntu 12.04 LTS and 14.04 LTS:
 `echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list`  
 `apt-get update`  
 `apt-get install lxc-docker python-pip`
+
 `pip install docker-compose`
 
 ## Usage
