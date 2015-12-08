@@ -1,5 +1,6 @@
 Dockerflix
 ========
+[![](https://badge.imagelayers.io/trick77/dockerflix:latest.svg)](https://imagelayers.io/?images=trick77/dockerflix:latest 'Get your own badge on imagelayers.io')
 
 Want to watch U.S. Netflix, Hulu, MTV, Vevo, Crackle, ABC, NBC, PBS, HBO...?  
 Got a Dnsmasq capable router at home, a Raspberry Pi or similar Linux computer?  
